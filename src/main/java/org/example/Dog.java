@@ -8,7 +8,7 @@ public class Dog extends Pet {
         this.breed = "";
     }
 
-    private Dog(String name, int age, String breed) {
+    public Dog(String name, int age, String breed) {
         super(name, age);
         this.breed = breed;
     }
@@ -19,5 +19,9 @@ public class Dog extends Pet {
 
     public void setBreed(String breed) {
         this.breed = breed;
+    }
+
+    public void speak() {
+        System.out.println("Woof, I am " + this.getName() + " and I am a " + this.getAge() + " year old " + this.breed);
     }
 }
